@@ -20,6 +20,9 @@ body{
     line-height:22px;
 }
 
+a{
+    color:#333333;
+}
 
 /**
  * Container for both content and sidebar
@@ -78,10 +81,16 @@ article.post{
 }
 /*.entry-meta .byline, .entry-meta .comments-link{display:none;}*/
 
-/**
- * Sidebar list style
- */
+
+
+/* Sidebar widget title */
+#primary-sidebar{
+    font-size:11px;
+}
+
+/* Sidebar list style */
 #secondary ul{
     list-style: none;
     padding-left:0px;
 }
+
