@@ -17,9 +17,7 @@
 
 			<?php get_sidebar( 'footer' ); ?>
 
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
+			<div class="site-info">Site designed and build by <a href="http://github.com/wangchj" target="_blank">Jeff Wang</a> with inspiration from <a href="http://getbootstrap.com/2.3.2" target="_blank">Twitter Bootstrap</a>. 
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 

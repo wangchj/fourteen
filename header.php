@@ -59,8 +59,25 @@
         </div> <!-- navbar-inner -->
     </div> <!-- navbar -->
     */ ?>
+
+    <!-- Nav bar -->
+    <div class="navbar">
+        <div class="navwrap">
+            <div class="navwrap2">
+                <ul class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="<?php echo get_category_link(get_cat_ID('SQL/MySQL')); ?>">MySQL</a></li>
+                <li><a href="<?php echo get_category_link(get_cat_ID('PHP')); ?>">PHP</a></li>
+                <li><a href="<?php echo get_category_link(get_cat_ID('Linux')); ?>">Ubuntu</a></li>
+                <li><a href="">About</a></li>
+                </ul><!-- nav -->
+                <?php get_search_form()?>
+            </div>
+        </div><!-- .navwrap -->
+    </div><!-- .navbar -->
+
 <!-- Fake header -->
-<div style="border:1px solid blue">This is the header area with some text here</div>
+<!-- div style="border:1px solid blue">This is the header area with some text here</div -->
 
 <div id="body_wrap1">
 <?php /*<div id="body_wrap2">*/?>
