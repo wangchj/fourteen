@@ -26,18 +26,13 @@ a{
 }
 
 /**
- * Container for both content and sidebar
+ * Container for both content and sidebar.
+ * The purpose is to center the body, which includes main content and sidebar.
  */
 #body_wrap1{
     /*border:2px solid black;*/
     width:1000px;
     /*float:left;*/
-    margin:0 auto;
-}
-
-#body_wrap2{
-    border:2px solid red;
-    width:900px;
     margin:0 auto;
 }
 
@@ -58,7 +53,7 @@ a{
     padding-bottom:10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
-.navwrap{
+.navwrap{ /* Purpose: set equal margin on both sides (left and right) of navbar. */
     width:1000px;
     margin:0 auto;
 }
@@ -195,3 +190,24 @@ table, th, td {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 th,td{padding:5px;}
+
+/* For phones with smaller screens */
+@media screen and (max-width: 650px) {
+
+	#secondary{
+		display:none;
+	}
+	#body_wrap1{
+		width:100%;
+	}
+	#content{
+	    /*border:1px solid #dddddd;*/
+	    width:100%;
+	    float:left;
+	    /*margin-right:40px;*/
+	}
+	.navwrap{ /* Purpose: set equal margin on both sides (left and right) of navbar. */
+    	width:100%;
+    	margin:0 auto;
+	}
+}
