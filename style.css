@@ -125,10 +125,12 @@ footer{
 h1.entry-title{
     margin-bottom: 2px;
 }
-.entry-title a{
+.entry-title{
     color:#000000;
-    text-decoration: none;
     font-size:24px;
+}
+.entry-title a{
+	text-decoration:none;
 }
 .entry-meta{
     font-size:12px;
