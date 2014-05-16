@@ -38,34 +38,12 @@
 
 <body <?php body_class(); ?>>
 
-    <?php /*
-	<div class="navbar navbar-inverse">
-        <div class="navbar-inner" style="padding-left:35px;padding-right:35px">
-            <ul class="nav">
-                <li class="active"><a href="index.php">Welcome</a></li>
-                <li class="active"><a href="index.php">SQL/MySQL</a></li>
-            </ul>
-            <ul class="nav" style="float:right">
-                    <li><a href="">Login</a></li>
-                    <li class="dropdown">
-                        <a id="Setups-menu" class="dropdown-toggle" data-toggle="dropdown" href="" data_target="#">Hello Jeff <b class="caret"></b></a>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account Info</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change Password</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-            </ul>
-        </div> <!-- navbar-inner -->
-    </div> <!-- navbar -->
-    */ ?>
-
     <!-- Nav bar -->
     <div class="navbar">
         <div class="navwrap">
             <div class="navwrap2">
                 <ul class="nav">
-                <li><a href="">Home</a></li>
+                <li><a href="<?php echo site_url()?>">Home</a></li>
                 <li><a href="<?php echo get_category_link(get_cat_ID('SQL/MySQL')); ?>">MySQL</a></li>
                 <li><a href="<?php echo get_category_link(get_cat_ID('PHP')); ?>">PHP</a></li>
                 <li><a href="<?php echo get_category_link(get_cat_ID('Linux')); ?>">Ubuntu</a></li>
@@ -75,9 +53,6 @@
             </div>
         </div><!-- .navwrap -->
     </div><!-- .navbar -->
-
-<!-- Fake header -->
-<!-- div style="border:1px solid blue">This is the header area with some text here</div -->
 
 <div id="body_wrap1">
 <?php /*<div id="body_wrap2">*/?>
