@@ -20,6 +20,10 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+
+    <?php if(is_home()):?>
+    <meta name="description" content="Codenuggets features tips and tricks for the tech-savvies and software developers." />
+    <?php endif;?>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
