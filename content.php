@@ -14,12 +14,6 @@
 	<?php twentyfourteen_post_thumbnail(); ?>
 
 	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() && false) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
-		</div>
-		<?php endif;?>
-		
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -30,12 +24,41 @@
 
 		<div class="entry-meta">
 			<?php
-				if ( 'post' == get_post_type() )
-					twentyfourteen_posted_on();
+				//Output author and date-time 
+				if ( 'post' == get_post_type() ) twentyfourteen_posted_on();
+			?>
 
+<?php /*
+			<?php //Output category links
+				if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog()) : ?>
+			 		| <span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
+			<?php endif;?>
+*/?>
+
+<?php //Output category links
+$taxonomy = 'category';
+
+// get the term IDs assigned to post.
+$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+// separator between links
+$separator = ' &rsaquo; ';
+
+if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
+
+	$term_ids = implode( ',' , $post_terms );
+	$terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids );
+	$terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+
+	// display post categories
+	echo  " | $terms";
+}
+?>
+
+			<?php //Comments link
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 			?>
-			 | <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+					| <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+
 			<?php
 				endif;
 
