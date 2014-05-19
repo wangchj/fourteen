@@ -11,7 +11,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php twentyfourteen_post_thumbnail(); ?>
 
 	<header class="entry-header">
 		<?php
@@ -66,6 +65,8 @@ if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
+
+	<?php twentyfourteen_post_thumbnail(); ?>
 
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">

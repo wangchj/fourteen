@@ -179,29 +179,19 @@ function twentyfourteen_post_thumbnail() {
 		return;
 	}
 
+	$images = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' );
+
 	if ( is_singular() ) :
 	?>
 
 	<div class="post-thumbnail">
-	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
-		} else {
-			the_post_thumbnail();
-		}
-	?>
+	<img src="<?= $images[0]?>" />
 	</div>
 
 	<?php else : ?>
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
-		} else {
-			the_post_thumbnail();
-		}
-	?>
+	<img src="<?= $images[0]?>" />
 	</a>
 
 	<?php endif; // End is_singular()

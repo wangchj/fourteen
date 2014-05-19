@@ -142,8 +142,11 @@ article.post{
     border-bottom: 1px solid #dddddd;
     margin-bottom: 30px;
 }
-/*.entry-meta .byline, .entry-meta .comments-link{display:none;}*/
-
+.post-thumbnail img
+{
+    width:100%;
+    margin-top:15px;
+}
 
 
 /* Sidebar widget title */
