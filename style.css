@@ -118,10 +118,6 @@ form.search-form input.search-submit{
     margin: 0;
 }
 
-footer{
-    clear:both;
-}
-
 h1.entry-title{
     margin-bottom: 2px;
 }
@@ -167,6 +163,7 @@ nav.paging-navigation h1{
 
 /* Page footer style */
 footer {
+    clear:both;
     float:left;
     width:100%;
     text-align: center;
