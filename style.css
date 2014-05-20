@@ -143,7 +143,15 @@ article.post{
     width:100%;
     margin-top:15px;
 }
-
+.tag-links{
+    margin-top:20px;
+    color:#808080;
+}
+.tag-links a{
+    color:#454545;
+    font-size:12px;
+    text-decoration: none;
+}
 
 /* Sidebar widget title */
 #primary-sidebar{

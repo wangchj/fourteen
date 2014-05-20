@@ -86,5 +86,5 @@ if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<?php //the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+	<?php if(is_single()) the_tags('<div class="tag-links"><span class="genericon-tag"></span> ', ', ', '</div>'); ?>
 </article><!-- #post-## -->

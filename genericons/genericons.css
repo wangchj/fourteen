@@ -98,7 +98,7 @@
 /* Meta icons */
 .genericon-comment:before {         content: '\f300'; }
 .genericon-category:before {        content: '\f301'; }
-.genericon-tag:before {             content: '\f302'; }
+.genericon-tag:before {             font-family:Genericons; content: '\f302'; }
 .genericon-time:before {            content: '\f303'; }
 .genericon-user:before {            content: '\f304'; }
 .genericon-day:before {             content: '\f305'; }
