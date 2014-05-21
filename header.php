@@ -51,7 +51,7 @@
                 <li><a href="<?php echo get_category_link(get_cat_ID('SQL/MySQL')); ?>">MySQL</a></li>
                 <li><a href="<?php echo get_category_link(get_cat_ID('PHP')); ?>">PHP</a></li>
                 <li><a href="<?php echo get_category_link(get_cat_ID('Linux')); ?>">Ubuntu</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="about/">About</a></li>
                 </ul><!-- nav -->
                 <?php get_search_form()?>
             </div>
